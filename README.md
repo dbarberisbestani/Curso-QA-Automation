@@ -2,6 +2,8 @@
 Curso de XAcademy - QA automation Pruebas
 ## README
 
+Tablero de Trello: https://trello.com/invite/b/6a171101eb654e1e90a7c273/ATTIb3b85fc1a0293a5a9549f41c6e8e42acFD275371/xacademy-qa-automation-diego-barberis
+
 ### QA Automation — Cypress (Technology with Purpose by Santex) 🚀🛠️
 
 Breve descripción
