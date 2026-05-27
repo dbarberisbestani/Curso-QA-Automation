@@ -3,7 +3,7 @@ describe ('Login Sauce Demo', ()=>{
     beforeEach(()=>{
         cy.visit('https://www.saucedemo.com/')
     })
-
+/* PARA SOLO EJECUTAR MIS CASOS DE PRUEBA.
     it('Login exitoso',()=>{
         // cy.log('test 1') 
         cy.get('[data-test="username"]').type('standard_user')
@@ -32,6 +32,22 @@ describe ('Login Sauce Demo', ()=>{
         cy.get('[data-test="error"]').should('be.visible').and('contain','Epic sadface: Username is required')
 
         
-    })
+    }) */
+
+
+
+    // Caso de Prueba de la Actividad Clase 5
+
+    //caso 4.0
+
+    it('Login con usuario bloqueado',()=>{
+        cy.get('[data-test="username"]').type('locked_out_user')
+        cy.get('[data-test="password"]').type('secret_sauce')
+        cy.get('[data-test="login-button"]').click()
+
+        cy.get('[data-test="error"]').should('be.visible').and('contain','Epic sadface: Sorry, this user has been locked out.')
+
+     })    
+
 
 })
