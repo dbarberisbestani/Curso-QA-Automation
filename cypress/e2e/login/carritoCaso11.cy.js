@@ -13,23 +13,20 @@ describe ('Login Sauce Demo', ()=>{
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
         cy.get('[data-test="remove-sauce-labs-backpack"]').should('be.visible').and('contain','Remove')
         cy.get('[data-test="shopping-cart-link"]').should('be.visible').and('have.text','1')
-
-    })
+    
         //Agrega Bike light al carrito y verifica que se hayan agregado correctamente ambos productos
-        it('Agregar producto al carrito',()=>{
-
+        
         cy.url().should('include','/inventory.html')
         cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').click()
         cy.get('[data-test="remove-sauce-labs-bike-light"]').should('be.visible').and('contain','Remove')
         cy.get('[data-test="shopping-cart-link"]').should('be.visible').and('have.text','2')
-    })
+    
         //Agrega onesie al carrito y verifica que se hayan agregado correctamente ambos productos
-        it('Agregar producto al carrito',()=>{
-
+        
         cy.url().should('include','/inventory.html')
         cy.get('[data-test="add-to-cart-sauce-labs-onesie"]').click()
         cy.get('[data-test="remove-sauce-labs-onesie"]').should('be.visible').and('contain','Remove')
-        cy.get('[data-test="shopping-cart-link"]').should('be.visible').and('have.text','1')
+        cy.get('[data-test="shopping-cart-link"]').should('be.visible').and('have.text','3')
     })
 
 })

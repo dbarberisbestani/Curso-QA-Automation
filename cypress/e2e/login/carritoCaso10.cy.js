@@ -12,7 +12,7 @@ describe ('Login Sauce Demo', ()=>{
         cy.url().should('include','/inventory.html')
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
         cy.get('[data-test="remove-sauce-labs-backpack"]').should('be.visible').and('contain','Remove')
-        cy.get('[data-test="shopping-cart-badge"]').should('be.visible').and('have.text','1')
+        cy.get('[data-test="shopping-cart-link"]').should('be.visible').and('have.text','1')
 
     })
 
