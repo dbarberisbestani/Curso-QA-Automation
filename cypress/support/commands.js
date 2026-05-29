@@ -29,3 +29,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('agregarAlCarrito', (producto) => {
+        cy.url().should('include','/inventory.html')
+        cy.get(`[data-test="add-to-cart-${producto}"]`).click()
+        cy.get(`[data-test="remove-${producto}"]`).should('be.visible').and('contain','Remove')
+        
+})
